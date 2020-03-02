@@ -44,4 +44,34 @@ if __name__ == '__main__':
     print(re.findall(r'datatable\d*\((.*)\)', text)[0])
 
     #解析json
+    """
+    {
+		"title": "非银金融行业周报：新证券法落地开启资本市场新篇章，积极关注券商板块",
+		"orgCode": "80000031",
+		"orgName": "东吴证券股份有限公司",
+		"orgSName": "东吴证券",
+		"publishDate": "2020-03-01 00:00:00",
+		"infoCode": "AP202003011375670959",
+		"industryCode": "738",
+		"industryName": "多元金融",
+		"author": ["11000210450.胡翔", "11000284032.朱洁羽"],
+		"indvIsNew": "",
+		"researcher": "胡翔,朱洁羽",
+		"attachType": "0",
+		"attachSize": 1127,
+		"attachPages": 12,
+		"encodeUrl": "z9yDxjkOZ7oWPJ8dhFQAvvmkhcLHJaT2kAs18COc6js="
+	}
+    """
+
+class IndustryReport:
+    def __init__(self):
+        self.title = ''
+        self.org_name = ''
+        self.pub_date = ''
+        self.author = []
+        self.encode_url = ''
+
+    
+
     

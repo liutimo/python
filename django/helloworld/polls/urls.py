@@ -11,10 +11,17 @@ from . import views
 #       尤其是在模板中。这个有用的特性允许你只改一个文件
 #       就能全局地修改某个 URL 模式。
 ###############################################################
+app_name = "polls"
+# urlpatterns = [
+#     path('', views.index, name = 'index'),
+#     path('<int:question_id>/', views.detail, name = 'detail'),
+#     path('<int:question_id>/results/', views.results, name = 'results'),
+#     path('<int:question_id>/vote', views.vote, name = 'vote'),
+# ]
 
+
+#通用视图
 urlpatterns = [
-    path('', views.index, name = 'index'),
+    path('', views.IndexView.as_view(), name = 'index'),
     path('<int:question_id>/', views.detail, name = 'detail'),
-    path('<int:question_id>/results/', views.results, name = 'results'),
-    path('<int:question_id>/vote', views.vote, name = 'vote'),
 ]
