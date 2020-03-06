@@ -7,7 +7,7 @@
 <body>
 
     <table>
-        <form action="register" method="post" >
+        <form action="{% url 'demo:register' %}" method="post" >
             <tr>
                 {% if error_msg %}
                     {{ error_msg }}
